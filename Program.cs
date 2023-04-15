@@ -1,33 +1,46 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data.Odbc;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ConsoleApp7
+namespace T1
 {
-    class Program
+    class Test1
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.Write("Enter Number1:");
-            int a = int.Parse(Console.ReadLine());
-            Console.Write("Enter Number2:");
-            int b = int.Parse(Console.ReadLine());
-            int flag = 0, z = 0, i = 1;
-            while (flag != 1)
+            int x = Convert.ToInt32(Console.ReadLine());
+            if (x % 2 == 0)
             {
-                z = a * i;
-                if (z % b == 0)
-                    flag = 1;
-                i++;
+                Even(x);
             }
-            Console.WriteLine("K.m.m ={0}", z);
-            while (b != 0)
+            else { odd(x); }
+        }
+        static int Even(int x)
+        {
+            int sum = 0, zarb = 1;
+            for (int i = 2; i < 2; i++)
             {
-                int c = a % b;
-                if (c == 0)
-                    Console.WriteLine("B.m.m={0}", b);
-                else
-                    a = b;
-                b = c;
+                sum += i;
+                zarb *= i;
+                Console.WriteLine("majmoe" + sum);
+                Console.WriteLine("haselzarb" + zarb);
             }
         }
+            static int odd(int x)
+            {
+                int sum = 0, zarb = 1;
+                for (int i = 1; i <= x; i++)
+                {
+                    sum += i;
+                    zarb *= i;
+                    Console.WriteLine("majmoe" + sum);
+                    Console.WriteLine("haselzarb" + zarb);
+                }
+            }
+        
     }
 }
