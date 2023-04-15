@@ -1,46 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Odbc;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 
-namespace T1
+namespace box_info
+
 {
-    class Test1
+    class test1
+
     {
-        static void Main()
+
+        public static void Main()
+
         {
-            int x = Convert.ToInt32(Console.ReadLine());
-            if (x % 2 == 0)
-            {
-                Even(x);
-            }
-            else { odd(x); }
+            int x=Convert.ToInt32(Console.ReadLine());
+
+             calc(x);
         }
-        static int Even(int x)
+        static void calc(int x)
         {
-            int sum = 0, zarb = 1;
-            for (int i = 2; i < 2; i++)
-            {
-                sum += i;
-                zarb *= i;
-                Console.WriteLine("majmoe" + sum);
-                Console.WriteLine("haselzarb" + zarb);
-            }
+            double result = Math.Pow(x, 2) + (2 * x) - 4;
+            Console.WriteLine(result); 
         }
-            static int odd(int x)
-            {
-                int sum = 0, zarb = 1;
-                for (int i = 1; i <= x; i++)
-                {
-                    sum += i;
-                    zarb *= i;
-                    Console.WriteLine("majmoe" + sum);
-                    Console.WriteLine("haselzarb" + zarb);
-                }
-            }
-        
     }
 }
